@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/sass/style.css';
 import { Link, Routes, Route, Outlet } from 'react-router-dom';
 
 import Calculator from './Components/Calculator.js';
@@ -8,6 +8,9 @@ function App() {
     <div className="App">
       <h1>Mini projects Collab</h1>
       <ul className="project_container">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
          <li>
            <Link to="/calculator">Calculator</Link>
          </li>
