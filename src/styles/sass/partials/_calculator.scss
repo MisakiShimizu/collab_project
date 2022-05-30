@@ -1,14 +1,55 @@
 .calculator_outer {
     border: 1px solid black;
-    padding: 60px 40px;
+    border-radius: 10%;
+    padding: 60px 40px; 
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background-color: #093145;
 }
-.calculator_grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px 10px;
+.display {
+    padding: 40px 60px;
 }
-.calculator_grid button {
-    border-radius: 50%;
-    padding: 10px;
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 85%;  
+}
+.keypad {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+    
+}
+.keypad button {
+    padding: 30px;
+    margin: 10px;  
+    background-color: #093145;
+}
+.operators {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.functions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.calculator_keypad_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+}
+.numbers button {
+    flex: 1 0 25%;
+}
+.equal button {
+    background-color: #02594C;
+    font-size: 3rem;
 }

@@ -1,7 +1,7 @@
 import './styles/sass/style.css';
-import { Link, Routes, Route, Outlet } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 
-import Calculator from './Components/Calculator.js';
+import Calculator from './Components/Calculator/Calculator.js';
 
 function App() {
   return (
