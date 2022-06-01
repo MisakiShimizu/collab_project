@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -205,6 +206,11 @@ li {
 .calculator {
   font-size: 2rem;
   color: white;
+  font-family: "Crimson Text", serif;
+}
+
+.functions {
+  font-size: 1.8rem;
 }
 
 .calculator_outer {
@@ -219,6 +225,9 @@ li {
 
 .display {
   padding: 40px 60px;
+  text-align: right;
+  position: relative;
+  top: 50px;
 }
 
 .calculator {
@@ -237,7 +246,20 @@ li {
 .keypad button {
   padding: 30px;
   margin: 10px;
+  border-radius: 10%;
   background-color: #093145;
+  border-color: rgba(9, 49, 69, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -3px -2px 5px rgba(255, 255, 255, 0.3);
+}
+.keypad button:active {
+  border-radius: 50%;
+  background-color: rgba(220, 240, 250, 0.5);
+  color: #000;
+  font-weight: 600;
+  border-color: transparent;
+  transition: 0.2s;
+  border-right: none;
 }
 
 .operators {
@@ -246,10 +268,16 @@ li {
   justify-content: flex-end;
 }
 
+.operators button:last-child {
+  background-color: #235F63;
+}
+.operators button:last-child:active {
+  background-color: #5FA596;
+}
+
 .functions {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 .calculator_keypad_main {
@@ -263,11 +291,16 @@ li {
   flex-wrap: wrap;
 }
 
-.numbers button {
+.numbers button,
+.functions button {
   flex: 1 0 25%;
 }
 
-.equal button {
-  background-color: #02594C;
+.equal {
   font-size: 3rem;
+}
+
+.delete {
+  position: relative;
+  top: 5px;
 }

@@ -9,6 +9,9 @@
 }
 .display {
     padding: 40px 60px;
+    text-align: right;
+    position: relative;
+    top: 50px;
 }
 .calculator {
     display: flex;
@@ -20,22 +23,40 @@
     display: flex;
     flex-direction: row-reverse;
     margin-top: 50px;
-    
 }
 .keypad button {
     padding: 30px;
     margin: 10px;  
+    border-radius: 10%;
     background-color: #093145;
+    border-color: rgba(#093145 , 0.1);
+    border-right: 1px solid rgba(#FFFF, 0.1);
+    box-shadow:-3px -2px 5px rgba(#FFFF, 0.3) ;
+    
+    &:active {
+        border-radius: 50%;
+        background-color: rgba(#dcf0fa, 0.5);
+        color: #000;
+        font-weight: 600;
+        border-color: transparent;
+        transition: 0.2s;
+        border-right: none;
+    }
 }
 .operators {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
+.operators button:last-child {
+    background-color: #235F63;
+    &:active {
+        background-color: #5FA596;
+    }
+}
 .functions {
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 .calculator_keypad_main {
     display: flex;
@@ -46,10 +67,14 @@
     display: flex;
     flex-wrap: wrap;
 }
-.numbers button {
+.numbers button,
+.functions button {
     flex: 1 0 25%;
 }
-.equal button {
-    background-color: #02594C;
+.equal {
     font-size: 3rem;
+}
+.delete {
+    position: relative;
+    top: 5px;
 }

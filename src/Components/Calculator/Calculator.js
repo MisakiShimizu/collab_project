@@ -1,6 +1,7 @@
 // calculator app
 
 // import Calculations from './CalculatorCalc.js';
+import { FiDelete } from "react-icons/fi"
 
 const calculator = () => {
     // const createNum = () => {
@@ -31,16 +32,16 @@ const calculator = () => {
                             <button>×</button>
                             <button>+</button>
                             <button>-</button>
-                            {/* <button className="equal">=</button> */}
+                            <button className="equal">=</button>
                         </div>
-                        <button className="equal">=</button>
+                        {/* <button className="equal">=</button> */}
                     </div>
                     <div className="calculator_keypad_main">
                          <div className="functions">
 
                         <button>AC</button>
                         <button>±</button>
-                        <button>DEL</button>
+                        <button><FiDelete className="delete"/></button>
                        
                         </div>
                     
@@ -58,6 +59,7 @@ const calculator = () => {
                             <button>3</button>
                             <button>0</button>
                             <button>.</button>
+                            {/* <button className="equals">=</button> */}
                             
                         </div>
                             
